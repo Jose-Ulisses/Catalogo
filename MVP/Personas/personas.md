@@ -1,0 +1,6 @@
+# Persona
+ 1. **Mariana** tem 25 anos, é formada em Design de Moda na UEMG. Busca sempre estar atualizada com as últimas tendências da moda. Gosta de comprar roupas para ocasiões especiais e para suas postagens no Instagram. Precisa de um lugar para frequentemente explorar novas coleções de roupas para inspiração de novos looks.
+ 
+ 2. **Carlos** tem 40 anos, é formado em Ciência da Computação pela USP. É uma pessoa que gosta de praticidade e não tem muito tempo vago. gosta de comprar utilizando filtros como "tamanho", "material". Ele costuma comprar peças essenciais como camisas, calças e jaquetas que combinem com seu estilo prático. Precisa de um site com navegação eficiente para informações claras sobre os produtos que lhe interessam.
+
+ 3.  **Lucas** tem 21 anos, é estudante de Administração e estagiário em uma empresa de logística. O orçamento de Lucas é apertado, por isso ele busca roupas acessíveis, que estejam em promoção, mas que ainda tenham um bom visual para o dia a dia, tanto na faculdade quanto no estágio. Lucas procura roupas versáteis e que durem.
