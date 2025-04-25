@@ -1,4 +1,3 @@
-
 .produtos {
     display: flex; 
     flex-wrap: wrap; 
@@ -18,4 +17,22 @@
     width: 100%; 
     height: auto;
     border-radius: 8px;
+}
+
+.produtos {
+    display: flex; 
+    gap: 2rem; justify-content: center; 
+    flex-wrap: wrap; 
+    padding: 2rem;
+}
+
+.card { 
+    border: 1px solid #ccc; 
+    padding: 1rem; 
+    width: 200px; 
+    text-align: center; 
+}
+
+.card img { 
+    width: 100%;
 }
