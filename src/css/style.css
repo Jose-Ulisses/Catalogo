@@ -29,3 +29,24 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.categorias a{
+  flex: 1 1 calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
+  text-align: center;
+}
+
+.categorias img{
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
