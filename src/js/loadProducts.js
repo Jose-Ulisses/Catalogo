@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const produtosContainer = document.getElementById("produtos-container");
   
-    const totalProdutos = 10;
+    const totalProdutos = 12;
     const produtos = [];
 
     for(let i = 1; i <= totalProdutos; i++){
