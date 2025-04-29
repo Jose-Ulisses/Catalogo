@@ -20,6 +20,18 @@ body {
   text-align: center;
 }
 
+.about {
+  background-color: #f5f5f5;
+}
+
+.about h3 {
+  text-align: center;
+}
+
+.about h5 {
+  color: #333;
+}
+
 .footer {
   text-align: center;
   padding: 2rem;
@@ -43,6 +55,9 @@ body {
   flex: 1 1 calc(50% - 1rem);
   max-width: calc(50% - 1rem);
   text-align: center;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .categorias img{
@@ -50,4 +65,29 @@ body {
     height: auto;
     border: 1px solid #ccc;
     border-radius: 8px;
-  }
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.genero {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.genero a {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.genero img{
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.categorias img:hover, .genero img:hover{
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
