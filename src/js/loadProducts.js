@@ -1,6 +1,39 @@
+import Roupa from './Roupa.js';
+
 document.addEventListener("DOMContentLoaded", () => {
     const produtosContainer = document.getElementById("produtos-container");
   
+    // Função assíncrona para buscar e digerir os dados
+    const roupas = async () => {
+      try {
+        const response = await fetch("https://nossoapi.com/roupas", );
+        
+        if (!response.ok) {
+          throw new Error(`Erro na requisição: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        // Mapeia cada item do JSON para uma instância da classe Roupa
+        const roupasList = data.map(item => new Roupa(
+          item.path,
+          item.name,
+          item.gender,
+          item.size,
+          item.color,
+          item.type,
+          item.season,
+          item.price
+        ));
+
+        console.log(roupasList);
+        return roupasList;
+
+      } catch (error) {
+        console.error("Erro ao buscar roupas:", error);
+      }
+    };
+
     const totalProdutos = 12;
     const produtos = [];
 
