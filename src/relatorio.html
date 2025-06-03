@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório Power BI</title>
+  <script src="https://cdn.powerbi.com/libs/powerbi-client/2.19.0/powerbi.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ÁGUA DOCE BOUTIQUE</div>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="categorias/feminino/feminino.html">Feminino</a>
+      <a href="categorias/masculino/masculino.html">Masculino</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <h1>Relatório de Vendas</h1>
+    <div id="reportContainer" style="height:600px;"></div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Água Doce Boutique. Todos os direitos reservados.</p>
+    <h5>Água Doce Boutique. Rua Frâncisco Cândido de Souza, 43, Nova Resende - MG</h5>
+  </footer>
+
+  <script>
+    async function carregarRelatorio() {
+      const token = localStorage.getItem('access_token'); // ou outro método de autenticação
+
+      const response = await fetch('/powerbi/token', {
+        headers: {
+          'Authorization': 'Bearer ' + token
+        }
+      });
+
+      const data = await response.json();
+
+      const models = window['powerbi-client'].models;
+      const config = {
+        type: 'report',
+        tokenType: models.TokenType.Embed,
+        accessToken: data.embedToken,
+        embedUrl: data.embedUrl,
+        id: data.reportId,
+        settings: {
+          filterPaneEnabled: false,
+          navContentPaneEnabled: true
+        }
+      };
+
+      powerbi.embed(document.getElementById('reportContainer'), config);
+    }
+
+    carregarRelatorio();
+  </script>
+</body>
+</html>
