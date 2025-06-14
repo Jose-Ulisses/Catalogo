@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <title>Relatório Power BI</title>
   <script src="https://cdn.powerbi.com/libs/powerbi-client/2.19.0/powerbi.min.js"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
   <header class="navbar">
     <div class="logo">ÁGUA DOCE BOUTIQUE</div>
     <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="categorias/feminino/feminino.html">Feminino</a>
-      <a href="categorias/masculino/masculino.html">Masculino</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="contato.html">Contato</a>
+      <a href="{{ url_for('routes.index') }}">Home</a>
+      <a href="{{ url_for('routes.feminino') }}">Feminino</a>
+      <a href="{{ url_for('routes.masculino') }}">Masculino</a>
+      <a href="{{ url_for('routes.sobre') }}">Sobre</a>
+      <a href="{{ url_for('routes.contato') }}">Contato</a>
     </nav>
   </header>
 
@@ -32,7 +32,7 @@
     async function carregarRelatorio() {
       const token = localStorage.getItem('access_token'); // ou outro método de autenticação
 
-      const response = await fetch('/powerbi/token', {
+      const response = await fetch('{{ url_for("routes.get_powerbi_token") }}', {
         headers: {
           'Authorization': 'Bearer ' + token
         }

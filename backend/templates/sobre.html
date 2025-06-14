@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Sobre</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
   <header class="navbar">
     <div class="logo">ÁGUA DOCE BOUTIQUE</div>
     <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="categorias/feminino/feminino.html">Feminino</a>
-      <a href="categorias/masculino/masculino.html">Masculino</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="contato.html">Contato</a>
+      <a href="{{ url_for('routes.index') }}">Home</a>
+      <a href="{{ url_for('routes.feminino') }}">Feminino</a>
+      <a href="{{ url_for('routes.masculino') }}">Masculino</a>
+      <a href="{{ url_for('routes.sobre') }}">Sobre</a>
+      <a href="{{ url_for('routes.contato') }}">Contato</a>
     </nav>
   </header>
+
   <section class="about">
     <h3>Sobre a Água Doce Boutique</h3>
     <h5>
-      somos uma loja de roupas que busca oferecer estilo, conforto e 
+      Somos uma loja de roupas que busca oferecer estilo, conforto e 
       qualidade para todos os momentos do seu dia. Nossa boutique é um espaço 
       pensado para quem valoriza a moda e bom atendimento. <br>
       Somos revendedores autorizados da marca Hering, reconhecida nacionalmente

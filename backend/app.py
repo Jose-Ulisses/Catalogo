@@ -4,8 +4,10 @@ from models import db, bcrypt
 from database import init_db
 from routes import routes, init_jwt
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
+
 app.config.from_object(Config)
+
 
 db.init_app(app)
 bcrypt.init_app(app)

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Masculino</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styleCategoria.css') }}" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ÁGUA DOCE BOUTIQUE</div>
+    <nav class="menu">
+      <a href="{{ url_for('routes.index') }}">Home</a>
+      <a href="{{ url_for('routes.feminino') }}">Feminino</a>
+      <a href="{{ url_for('routes.masculino') }}">Masculino</a>
+      <a href="{{ url_for('routes.sobre') }}">Sobre</a>
+      <a href="{{ url_for('routes.contato') }}">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="categorias">
+      <a href="{{ url_for('routes.casaco_jaqueta_masc') }}">
+        <img src="{{ url_for('static', filename='imagens/casacos&jaquetas_masc.jpg') }}" alt="casJaq_masc" />
+      </a>
+      <a href="{{ url_for('routes.polo_masc') }}">
+        <img src="{{ url_for('static', filename='imagens/polos_masc.jpg') }}" alt="polosMasc" />
+      </a>
+      <a href="{{ url_for('routes.camisas_masc') }}">
+        <img src="{{ url_for('static', filename='imagens/camisas_masc.jpg') }}" alt="camisas_masc" />
+      </a>
+      <a href="{{ url_for('routes.calcas_masc') }}">
+        <img src="{{ url_for('static', filename='imagens/calcas_masc.jpg') }}" alt="calcas_masc" />
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Água Doce Boutique. Todos os direitos reservados.</p>
+    <h5>Água Doce Boutique. Rua Frâncisco Cândido de Souza, 43, Nova Resende - MG</h5>
+  </footer>
+</body>
+</html>
