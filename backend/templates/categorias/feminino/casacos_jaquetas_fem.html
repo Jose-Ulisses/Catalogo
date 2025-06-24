@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleCategoria.css') }}" />
-    <title>Casacos - Jaquetas</title> 
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styleCategoria.css') }}"
+    />
+    <title>Casacos - Jaquetas</title>
+  </head>
+  <body>
     <header class="navbar">
-        <div class="logo">ÁGUA DOCE BOUTIQUE</div>
-        <nav class="menu">
-          <a href="{{ url_for('routes.index') }}">Home</a>
-          <a href="{{ url_for('routes.feminino') }}">Feminino</a>
-          <a href="{{ url_for('routes.masculino') }}">Masculino</a>
-          <a href="{{ url_for('routes.sobre') }}">Sobre</a>
-          <a href="{{ url_for('routes.contato') }}">Contato</a>
-        </nav>
+      <div class="logo">ÁGUA DOCE BOUTIQUE</div>
+      <nav class="menu">
+        <a href="{{ url_for('routes.index') }}">Home</a>
+        <a href="{{ url_for('routes.feminino') }}">Feminino</a>
+        <a href="{{ url_for('routes.masculino') }}">Masculino</a>
+        <a href="{{ url_for('routes.sobre') }}">Sobre</a>
+        <a href="{{ url_for('routes.contato') }}">Contato</a>
+      </nav>
     </header>
 
     <section class="hero">
-        <!-- Conteúdo específico dos casacos e jaquetas aqui -->
+      <div class="hero-content">
+        <img
+          src="{{ url_for('static', filename='imagens/feminino/casacosJaquetas_fem.jpg') }}"
+          alt="Casacos e Jaquetas Femininas"
+          class="hero-img"
+        />
+        <div class="hero-text">
+          <h1>Casacos & Jaquetas</h1>
+          <p>
+            Perfeitos para o frio com muito estilo. Confira nossas opções em
+            diversos cortes e cores.
+          </p>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2025 Água Doce Boutique. Todos os direitos reservados.</p>
-        <h5>Água Doce Boutique. Rua Frâncisco Cândido de Souza, 43, Nova Resende - MG</h5>
+      <p>&copy; 2025 Água Doce Boutique. Todos os direitos reservados.</p>
+      <h5>
+        Água Doce Boutique. Rua Frâncisco Cândido de Souza, 43, Nova Resende -
+        MG
+      </h5>
     </footer>
-</body>
+  </body>
 </html>

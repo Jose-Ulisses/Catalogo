@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-    <title>Polo</title>
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>Polo Masculino</title>
+  </head>
+  <body>
     <header class="navbar">
       <div class="logo">ÁGUA DOCE BOUTIQUE</div>
       <nav class="menu">
@@ -19,12 +22,28 @@
     </header>
 
     <section class="hero">
-
+      <div class="hero-content">
+        <img
+          src="{{ url_for('static', filename='imagens/polos_masc.jpg') }}"
+          alt="Polo Masculino"
+          class="hero-img"
+        />
+        <div class="hero-text">
+          <h1>Polo Masculino</h1>
+          <p>
+            Conforto e elegância para o dia a dia. Encontre a polo perfeita para
+            você.
+          </p>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
       <p>&copy; 2025 Água Doce Boutique. Todos os direitos reservados.</p>
-      <h5>Água Doce Boutique. Rua Frâncisco Cândido de Souza, 43, Nova Resende - MG</h5>
+      <h5>
+        Água Doce Boutique. Rua Frâncisco Cândido de Souza, 43, Nova Resende -
+        MG
+      </h5>
     </footer>
-</body>
+  </body>
 </html>

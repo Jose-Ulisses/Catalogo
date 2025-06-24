@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <title>Feminino</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styleCategoria.css') }}" />
-</head>
-<body>
-  <header class="navbar">
-    <div class="logo">ÁGUA DOCE BOUTIQUE</div>
-    <nav class="menu">
-      <a href="{{ url_for('routes.index') }}">Home</a>
-      <a href="{{ url_for('routes.feminino') }}">Feminino</a>
-      <a href="{{ url_for('routes.masculino') }}">Masculino</a>
-      <a href="{{ url_for('routes.sobre') }}">Sobre</a>
-      <a href="{{ url_for('routes.contato') }}">Contato</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Feminino</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styleCategoria.css') }}"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">ÁGUA DOCE BOUTIQUE</div>
+      <nav class="menu">
+        <a href="{{ url_for('routes.index') }}">Home</a>
+        <a href="{{ url_for('routes.feminino') }}">Feminino</a>
+        <a href="{{ url_for('routes.masculino') }}">Masculino</a>
+        <a href="{{ url_for('routes.sobre') }}">Sobre</a>
+        <a href="{{ url_for('routes.contato') }}">Contato</a>
+      </nav>
+    </header>
 
-  <section class="hero">
-    <div class="categorias">
-      <a href="{{ url_for('routes.casacos_jaquetas_fem') }}">
-        <img src="{{ url_for('static', filename='imagens/feminino/casacosJaquetas_fem.jpg') }}" alt="casJaq_fem" />
-      </a>
-      <a href="{{ url_for('routes.camisetas_regatas_fem') }}">
-        <img src="{{ url_for('static', filename='imagens/feminino/camisetasRegatas_fem.jpg') }}" alt="camReg_fem" />
-      </a>
-      <a href="{{ url_for('routes.jeans_sarja_fem') }}">
-        <img src="{{ url_for('static', filename='imagens/feminino/jeansSarja_fem.jpg') }}" alt="jeansSarja_fem" />
-      </a>
-      <a href="{{ url_for('routes.camisas_fem') }}">
-        <img src="{{ url_for('static', filename='imagens/feminino/conjuntos_fem.jpg') }}" alt="conjuntos_fem" />
-      </a>
-    </div>
-  </section>
-  
-  <footer class="footer">
-    <p>&copy; 2025 Água Doce Boutique. Todos os direitos reservados.</p>
-    <h5>Água Doce Boutique. Rua Frâncisco Cândido de Souza, 43, Nova Resende - MG</h5>
-  </footer>
-</body>
+    <section class="hero">
+      <div class="categorias">
+        <a href="{{ url_for('routes.casacos_jaquetas_fem') }}">
+          <img
+            src="{{ url_for('static', filename='imagens/feminino/casacosJaquetas_fem.jpg') }}"
+            alt="casJaq_fem"
+          />
+        </a>
+        <a href="{{ url_for('routes.camisetas_regatas_fem') }}">
+          <img
+            src="{{ url_for('static', filename='imagens/feminino/camisetasRegatas_fem.jpg') }}"
+            alt="camReg_fem"
+          />
+        </a>
+        <a href="{{ url_for('routes.jeans_sarja_fem') }}">
+          <img
+            src="{{ url_for('static', filename='imagens/feminino/jeansSarja_fem.jpg') }}"
+            alt="jeansSarja_fem"
+          />
+        </a>
+        <a href="{{ url_for('routes.camisas_fem') }}">
+          <img
+            src="{{ url_for('static', filename='imagens/feminino/conjuntos_fem.jpg') }}"
+            alt="conjuntos_fem"
+          />
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 Água Doce Boutique. Todos os direitos reservados.</p>
+      <h5>
+        Água Doce Boutique. Rua Frâncisco Cândido de Souza, 43, Nova Resende -
+        MG
+      </h5>
+    </footer>
+  </body>
 </html>
